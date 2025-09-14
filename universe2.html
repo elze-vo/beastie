@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STREAMER AU</title>
+  <style>
+    /* Full-page darkened background */
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: "Georgia", serif;
+      color: #ff69b4; /* optional text color, can adjust */
+      text-align: center;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bg2.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 10px #000;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5em;
+      text-shadow: 1px 1px 5px #000;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    /* Mid-sized image below text */
+    .mid-image {
+      margin-top: 30px;
+      width: 600px;
+      max-width: 80%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 20px #000;
+    }
+
+    /* Play music button */
+    .play-music {
+      margin-top: 20px;
+      padding: 15px 25px;
+      background: #6441a5; /* Twitch purple */
+      color: black;
+      border: 2px solid black;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      box-shadow: 0 0 10px #6441a5;
+      transition: all 0.3s;
+    }
+
+    .play-music:hover {
+      background: #7b5dc7;
+      box-shadow: 0 0 20px #7b5dc7;
+    }
+
+    /* Return to portal button */
+    .portal-back {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 15px 25px;
+      background: #6441a5; /* Twitch purple */
+      color: black;
+      border: 2px solid black;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #6441a5;
+      transition: all 0.3s;
+    }
+
+    .portal-back:hover {
+      background: #7b5dc7;
+      box-shadow: 0 0 20px #7b5dc7;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background music -->
+  <audio id="bgMusic" loop autoplay>
+    <source src="sound2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1> STREAMER AU </h1>
+  <p> hard hitter. we've revisited this countless times and it never disappoints. thats potroast!!!! </p>
+
+  <!-- Mid-sized image -->
+  <img src="2.png" alt="Sci-Fi Scene" class="mid-image">
+
+  <!-- Play music button -->
+  <button class="play-music" onclick="document.getElementById('bgMusic').play()">
+    ▶ Play Music
+  </button>
+
+  <!-- Return to portal button -->
+  <a class="portal-back" href="index.html">Return to the Portal</a>
+</body>
+</html>

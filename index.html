@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HBD BEASTIE</title>
+  <style>
+    body {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('bg0.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+
+    h1 {
+      margin-bottom: 60px; /* more space above portals */
+      font-size: 2em;
+      animation: flicker 3s infinite;
+      text-align: center;
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 80px; /* increased spacing between portals */
+      justify-items: center; /* ✅ centers portal9 */
+    }
+
+    .portal {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      text-shadow: 0 0 10px #000;
+      animation: pulse 3s infinite ease-in-out;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .portal:hover {
+      transform: scale(1.1);
+    }
+
+    /* Unique colors for each portal */
+    /* Unique colors for each portal with new palette */
+
+/* 1. Bright Red */
+/* 1. Bright Red */
+.portal1 { 
+  background: radial-gradient(circle, #ff0000, #800000, #000); 
+  box-shadow: 0 0 20px 6px #ff0000, 0 0 40px 15px #ff5555; 
+}
+.portal1:hover { 
+  box-shadow: 0 0 40px 15px #ff5555, 0 0 60px 25px #ff0000; 
+}
+
+/* 2. Twitch Purple */
+.portal2 { 
+  background: radial-gradient(circle, #6441a5, #4b0082, #000); 
+  box-shadow: 0 0 20px 6px #6441a5, 0 0 40px 15px #a290ff; 
+}
+.portal2:hover { 
+  box-shadow: 0 0 40px 15px #a290ff, 0 0 60px 25px #6441a5; 
+}
+
+/* 3. Gold */
+.portal3 { 
+  background: radial-gradient(circle, #ffd700, #b8860b, #000); 
+  box-shadow: 0 0 20px 6px #ffd700, 0 0 40px 15px #ffec8b; 
+}
+.portal3:hover { 
+  box-shadow: 0 0 40px 15px #ffec8b, 0 0 60px 25px #ffd700; 
+}
+
+/* 4. Blue */
+.portal4 { 
+  background: radial-gradient(circle, #00f, #00008b, #000); 
+  box-shadow: 0 0 20px 6px #00f, 0 0 40px 15px #1e90ff; 
+}
+.portal4:hover { 
+  box-shadow: 0 0 40px 15px #1e90ff, 0 0 60px 25px #00f; 
+}
+
+/* 5. Silver */
+.portal5 { 
+  background: radial-gradient(circle, #c0c0c0, #808080, #000); 
+  box-shadow: 0 0 20px 6px #c0c0c0, 0 0 40px 15px #d3d3d3; 
+}
+.portal5:hover { 
+  box-shadow: 0 0 40px 15px #d3d3d3, 0 0 60px 25px #c0c0c0; 
+}
+
+/* 6. Orange (replacing yellow) */
+.portal6 { 
+  background: radial-gradient(circle, #ffa500, #cc8400, #000); 
+  box-shadow: 0 0 20px 6px #ffa500, 0 0 40px 15px #ffb733; 
+}
+.portal6:hover { 
+  box-shadow: 0 0 40px 15px #ffb733, 0 0 60px 25px #ffa500; 
+}
+
+/* 7. Lighter Army Green */
+.portal7 { 
+  background: radial-gradient(circle, #6b8e23, #556b2f, #000); 
+  box-shadow: 0 0 20px 6px #6b8e23, 0 0 40px 15px #9acd32; 
+}
+.portal7:hover { 
+  box-shadow: 0 0 40px 15px #9acd32, 0 0 60px 25px #6b8e23; 
+}
+
+/* 8. Pink */
+.portal8 { 
+  background: radial-gradient(circle, #ff69b4, #c71585, #000); 
+  box-shadow: 0 0 20px 6px #ff69b4, 0 0 40px 15px #ffb6c1; 
+}
+.portal8:hover { 
+  box-shadow: 0 0 40px 15px #ffb6c1, 0 0 60px 25px #ff69b4; 
+}
+
+/* Ninth portal - LAST (color changing) */
+/* Ninth portal - LAST (smooth gradient color shift) */
+.portal9 {
+  background: radial-gradient(circle, #ff1493, #800080, #000); /* start pink/purple */
+  box-shadow: 
+    0 0 30px 10px #ff1493,
+    0 0 60px 25px #ff69b4,
+    0 0 90px 40px #ff00ff;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  grid-column: 1 / -1; /* spans full row */
+  width: 160px;
+  height: 160px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-shadow: 0 0 8px #000;
+
+  animation: pulse9 3s infinite ease-in-out, colorCycle 10s linear infinite;
+}
+
+.portal9:hover {
+  transform: scale(1.15);
+}
+
+/* Pulse (breathing) */
+@keyframes pulse9 {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* Smooth continuous hue rotation */
+@keyframes colorCycle {
+  0%   { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+
+
+
+
+/* Different pulse speeds and delays for each portal */
+.portal1 { animation: pulse 3s infinite ease-in-out 0s; }
+.portal2 { animation: pulse 3.2s infinite ease-in-out 0.2s; }
+.portal3 { animation: pulse 2.8s infinite ease-in-out 0.1s; }
+.portal4 { animation: pulse 3.5s infinite ease-in-out 0.3s; }
+.portal5 { animation: pulse 3.1s infinite ease-in-out 0.15s; }
+.portal6 { animation: pulse 2.9s infinite ease-in-out 0.25s; }
+.portal7 { animation: pulse 3.3s infinite ease-in-out 0.05s; }
+.portal8 { animation: pulse 3.6s infinite ease-in-out 0.2s; }
+
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+      20%, 22%, 24%, 55% { opacity: 0.6; }
+    }
+  </style>
+</head>
+<body>
+  <h1>happiest of birthdays, beastie! revisit our aus:) i wuv you</h1>
+  
+  <div class="portal-grid">
+    <a href="universe1.html" class="portal portal1"></a>
+    <a href="universe2.html" class="portal portal2"></a>
+    <a href="universe3.html" class="portal portal3"></a>
+    <a href="universe4.html" class="portal portal4"></a>
+    <a href="universe5.html" class="portal portal5"></a>
+    <a href="universe6.html" class="portal portal6"></a>
+    <a href="universe7.html" class="portal portal7"></a>
+    <a href="universe8.html" class="portal portal8"></a>
+    <a href="universe9.html" class="portal portal9">★</a>
+  </div>
+</body>
+</html>
